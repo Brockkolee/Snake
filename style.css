@@ -1,0 +1,27 @@
+
+h1 {
+    text-align: center;
+}
+
+.grid > div {
+    
+    border: black 1px solid;
+}
+
+.snake {
+    background-color: blue;
+}
+
+.food {
+    background-color: red;
+}
+
+.grid {
+    margin: 10vmin auto;
+    height: 60vmin;
+    width: 60vmin;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+
+}
