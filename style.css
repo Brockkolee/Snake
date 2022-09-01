@@ -6,6 +6,7 @@
 .game {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -27,13 +28,12 @@ h1 {
 
 .grid {
     border: black 1px solid;
-    height: 60vmin;
-    width: 50vmin;
+    height: 70vmin;
+    min-width: 70vmin;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(22, 1fr);
     margin: 20px;
-
 }
 
 
@@ -70,8 +70,6 @@ h1 {
     text-align: center;
  }
  
-
-
 
 .wrapper {
     display: flex;

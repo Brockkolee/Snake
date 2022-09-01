@@ -74,16 +74,16 @@ function moveSnake() {
 
 function control(e) {
     //if up arrow is press and snake is not moving down
-    if (e.key == "ArrowUp" && direction != width) {
+    if (e.key == "ArrowUp" && direction != width || e.target.classList == "up" && direction != width) {
         direction = -width;
     //if down arrow is press and snake is not moving up
-    } else if (e.key == "ArrowDown" && direction != -width) {
+    } else if (e.key == "ArrowDown" && direction != -width || e.target.classList == "down" && direction != -width) {
         direction = +width;
     //if left arrow is press and snake is not moving right
-    } else if (e.key == "ArrowLeft" && direction != 1) {
+    } else if (e.key == "ArrowLeft" && direction != 1 || e.target.classList == "left" && direction != 1) {
         direction = -1;
     //if right arrow is press and snake is not moving left
-    } else if (e.key == "ArrowRight" && direction != -1) {
+    } else if (e.key == "ArrowRight" && direction != -1 || e.target.classList == "right" && direction != -1) {
         direction = 1;
     }
     //prevent snake from moving in opposite direction to so snake will not colide to itself
@@ -104,6 +104,8 @@ makeFood();
 
 //execute the key function when key is up
 document.addEventListener('keyup', control);
+document.addEventListener('mousedown', control);
+
 
 })
 
