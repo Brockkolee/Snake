@@ -5,7 +5,7 @@ const score = document.querySelector("#score")
 const text = document.querySelector("#text")
 
 // width of the gameboard
-const width = 10
+const width = 20
 //starting array of squares that the snake occupies
 let snake = [2,1,0]
 
